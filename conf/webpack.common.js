@@ -12,7 +12,7 @@ module.exports = {
 
   context: path.join(process.cwd(), 'src'), //the home directory for webpack
 
-  devtool: 'source-map', // enhance debugging by adding meta info for the browser devtools
+  devtool: 'cheap-module-eval-source-map', // enhance debugging by adding meta info for the browser devtools
 
   entry: {
     app: './index.js'
