@@ -1,0 +1,15 @@
+{
+  "name": "flickrgeo",
+  "version": "1.0.0",
+  "description": "Flickr photos as geoJSON",
+  "main": "flickr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flickr",
+    "geojson"
+  ],
+  "author": "Yuriy Ilkiv",
+  "license": "ISC"
+}

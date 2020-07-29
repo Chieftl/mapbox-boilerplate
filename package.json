@@ -23,7 +23,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config conf/webpack.dev.js",
+    "start": "export NODE_ENV=development && webpack-dev-server --config conf/webpack.dev.js",
     "build": "webpack --env=prod --progress --profile --colors",
     "lint": "eslint ./src/**.js",
     "coverage": "jest --coverage --config=conf/jest.config.js",
@@ -35,6 +35,7 @@
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "1.6.0",
     "clean-webpack-plugin": "0.1.16",
     "css-loader": "^0.28.5",
@@ -50,5 +51,8 @@
     "webpack-dev-server": "2.7.1",
     "webpack-merge": "4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "flickr-sdk": "^3.7.0",
+    "mapbox-gl": "^0.45.0"
+  }
 }

@@ -1,5 +1,5 @@
 import FlickrSDK from 'flickr-sdk';
-import {arrayToGeoJson} from 'arrays';
+import {arrayToGeoJson} from 'flickrgeo/arrays';
 
 function flickrError(err) {
   console.error('bonk', err);

@@ -12,7 +12,7 @@ module.exports = {
 
   context: path.join(process.cwd(), 'src'), //the home directory for webpack
 
-  devtool: 'source-map', // enhance debugging by adding meta info for the browser devtools
+  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-eval-source-map' : 'cheap-module-eval-source-map', // enhance debugging by adding meta info for the browser devtools
 
   entry: {
     app: './index.js'
@@ -21,7 +21,7 @@ module.exports = {
   output: {
     path: path.join(process.cwd(), 'dist'),
     filename: '[name].[hash].js',
-    publicPath: '/',
+    publicPath: '',
     sourceMapFilename: '[name].map'
   },
 
@@ -31,12 +31,12 @@ module.exports = {
   },
 
   module: {
-    rules: [{
+    rules: [/*{
       enforce: "pre", //to check source files, not modified by other loaders (like babel-loader)
       test: /\.js$/,
       exclude: /node_modules/,
       loader: "eslint-loader"
-    }, {
+    }, */{
       test: /\.js$/,
       exclude: /node_modules/,
       use: {
@@ -45,6 +45,9 @@ module.exports = {
           presets: ['env']
         }
       }
+    },{
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
     },{
         test: /\.scss$/,
         use: extractSass.extract({
