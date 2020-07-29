@@ -2,7 +2,6 @@ import FlickrGeo from 'flickrgeo';
 
 export default class FlickrSet {
   constructor() {
-    //this.fl = new FlickrGeo(API_KEY);
     //debugger
 
     this.styles = {
@@ -15,6 +14,10 @@ export default class FlickrSet {
     };
   }
 
+  init() {
+    this.fl = new FlickrGeo(API_KEY);
+  }
+
   bboxPhotos(bounds) {
     let boundsToBBox = bounds => {
       let corners = {
@@ -25,8 +28,8 @@ export default class FlickrSet {
     }
 
     let bbox = boundsToBBox(bounds);
-    let fl = new FlickrGeo(this.config.API_KEY);
-    return fl.search({
+    //let fl = new FlickrGeo(this.config.API_KEY);
+    return this.fl.search({
       //user_id: '151135260@N07',
       bbox: bbox,//'24.5997,48.8682,24.8937,49.0029',
       extras: 'geo,url_n,tags',

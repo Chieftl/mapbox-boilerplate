@@ -26,6 +26,8 @@ export default class liveLayer {
     this.ajaxFunc = options.ajaxFunc;  // function(bounds)
     this.popupFunc = options.popupFunc;  // function(properties)
 
+    //options.init();
+
     this.addEvents();
   }
 

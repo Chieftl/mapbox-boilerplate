@@ -1,4 +1,4 @@
-import sayHello from './hello';
+/*import sayHello from './hello';
 import './index.scss';
 
 //document.getElementById('root').innerHTML = sayHello();
@@ -6,10 +6,10 @@ import './index.scss';
 import config from 'config/index';
 import MapFabrica from 'map/fabrica';
 import '../css/main.scss';
-import mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';*/
 
 //let l = console.log;
-
+/*
 let engine = MapFabrica.createEngine('mapbox', 'map', {
   center: config.map.center,
   zoom: config.map.zoom,
@@ -32,12 +32,13 @@ let flickrLiveLayer = new LiveLayer({
     API_KEY: FLICKR_API_KEY,
     map: engine.map,
   },
+  init: flickrSet.init,
   layerId: 'flickr-photos',
   styles: flickrSet.styles,
   stylesFunc: flickrSet.stylesFunc,
   ajaxFunc: flickrSet.bboxPhotos,
   popupFunc: flickrSet.popupFunc,
 });
-
+*/
 
 //document.querySelector('.flickr-box button').addEventListener('click', function () {});
